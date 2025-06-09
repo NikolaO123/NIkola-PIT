@@ -7,24 +7,22 @@
     <link rel="stylesheet" href="style2.css"/>
 </head>
 <body>
-     <div class="container mt-5">
+    <div class="container mt-5">
         <h1>Kontaktirajte nas</h1>
         <p>Ako imate pitanja ili želite više informacija, slobodno nas kontaktirajte putem forme ispod ili pozivom na broj telefona.</p>
 
-    <form
-  action="https://formspree.io/f/mkgbjbgz"
-  method="POST"
->            <div class="mb-3">
+        <form id="kontakt-forma" action="https://formspree.io/f/mkgbjbgz" method="POST">
+            <div class="mb-3">
                 <label for="ime" class="form-label">Ime i prezime</label>
-                <input type="text" class="form-control" id="ime" placeholder="Unesite vaše ime" required>
+                <input type="text" class="form-control" id="ime" name="ime" placeholder="Unesite vaše ime" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email adresa</label>
-                <input type="email" class="form-control" id="email" placeholder="Unesite vaš email" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Unesite vaš email" required>
             </div>
             <div class="mb-3">
                 <label for="poruka" class="form-label">Poruka</label>
-                <textarea class="form-control" id="poruka" rows="4" placeholder="Vaša poruka..." required></textarea>
+                <textarea class="form-control" id="poruka" name="poruka" rows="4" placeholder="Vaša poruka..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Pošalji</button>
         </form>
@@ -33,7 +31,45 @@
         <h2>Naši kontakt podaci</h2>
         <p><strong>Telefon:</strong> +381 60 3345 223</p>
         <p><strong>Email:</strong> info@RetroWatch.rs</p>
-        <p><strong>Adresa:</strong>xxxxxxxxxxxx</p>
+        <p><strong>Adresa:</strong> xxxxxxxxxxxx</p>
     </div>
+
+    <!-- Opcioni JavaScript za AJAX slanje forme -->
+    <script>
+        var forma = document.getElementById("kontakt-forma");
+        forma.addEventListener("submit", function(event) {
+            event.preventDefault(); // Spreči podrazumevano slanje forme
+
+            var podaci = {
+                ime: document.querySelector("[name='ime']").value,
+                email: document.querySelector("[name='email']").value,
+                poruka: document.querySelector("[name='poruka']").value
+            };
+
+            fetch("https://formspree.io/f/mkgbjbgz", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(podaci)
+            })
+            .then(odgovor => {
+                if (odgovor.ok) {
+                    alert("Poruka je uspešno poslata!");
+                    forma.reset(); // Resetuj formu nakon slanja
+                } else {
+                    return odgovor.json().then(podaci => {
+                        console.error("Greška:", podaci.errors);
+                        alert("Došlo je do greške prilikom slanja forme.");
+                    });
+                }
+            })
+            .catch(greska => {
+                console.error("Greška:", greska);
+                alert("Došlo je do greške prilikom slanja forme.");
+            });
+        });
+    </script>
 </body>
 </html>
