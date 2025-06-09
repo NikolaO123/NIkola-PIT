@@ -34,5 +34,42 @@
         <p><strong>Adresa:</strong> xxxxxxxxxxxx</p>
     </div>
 
+    <!-- Opcioni JavaScript za AJAX slanje forme -->
+    <script>
+        var forma = document.getElementById("kontakt-forma");
+        forma.addEventListener("submit", function(event) {
+            event.preventDefault(); // Spreči podrazumevano slanje forme
+
+            var podaci = {
+                ime: document.querySelector("[name='ime']").value,
+                email: document.querySelector("[name='email']").value,
+                poruka: document.querySelector("[name='poruka']").value
+            };
+
+            fetch("https://formspree.io/f/mkgbjbgz", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(podaci)
+            })
+            .then(odgovor => {
+                if (odgovor.ok) {
+                    alert("Poruka je uspešno poslata!");
+                    forma.reset(); // Resetuj formu nakon slanja
+                } else {
+                    return odgovor.json().then(podaci => {
+                        console.error("Greška:", podaci.errors);
+                        alert("Došlo je do greške prilikom slanja forme.");
+                    });
+                }
+            })
+            .catch(greska => {
+                console.error("Greška:", greska);
+                alert("Došlo je do greške prilikom slanja forme.");
+            });
+        });
+    </script>
 </body>
 </html>
