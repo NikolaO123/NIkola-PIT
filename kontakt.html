@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
-    <link rel="stylesheet" href="style2.css"/>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="icon" href="SLIKE/logo5.png" type="image/x-icon">
 </head>
 <body>
     <div class="container mt-5">
@@ -34,12 +35,10 @@
         <p><strong>Adresa:</strong> xxxxxxxxxxxx</p>
     </div>
 
-    <!-- Opcioni JavaScript za AJAX slanje forme -->
     <script>
         var forma = document.getElementById("kontakt-forma");
         forma.addEventListener("submit", function(event) {
-            event.preventDefault(); // Spreči podrazumevano slanje forme
-
+            event.preventDefault();
             var podaci = {
                 ime: document.querySelector("[name='ime']").value,
                 email: document.querySelector("[name='email']").value,
@@ -57,7 +56,7 @@
             .then(odgovor => {
                 if (odgovor.ok) {
                     alert("Poruka je uspešno poslata!");
-                    forma.reset(); // Resetuj formu nakon slanja
+                    forma.reset();
                 } else {
                     return odgovor.json().then(podaci => {
                         console.error("Greška:", podaci.errors);

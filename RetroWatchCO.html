@@ -1,97 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RetroWatchCO</title>
-<link rel="stylesheet" href="style.css"/>
-<link rel="icon" href="SLIKE/logo5.png" type="image/x-icon" />
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="SLIKE/logo5.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 </head>
 <body id="GLAVNI">
-    <form id="form1" runat="server">   
-        <div id="div_logo">
-            <img id="logo" src="SLIKE/logo5.png"/>
-            <a href="https://www.instagram.com/" target="_blank"><img style="margin:0 auto;height:65px;margin-left:42%;" id="insta" src="SLIKE/insta.png" /></a>
-            <nav role="navigation">
+    <div id="div_logo">
+        <img id="logo" src="SLIKE/logo5.png" alt="RetroWatch Logo"/>
+        <nav role="navigation">
             <div id="meni">
-            <input type="checkbox" id="menuCheckbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="glavni-meni">
-            <li>
-            <a href="#">
-            <label style="font-family:poppins; font-weight:bold;" for="menuCheckbox" onclick="this.parentNode.click();">POČETNA</label>
-            </a>
-            </li>
-            <li>
-            <a href="#about">
-            <label for="menuCheckbox" onclick="this.parentNode.click();"><a style="font-family:poppins; font-weight:bold;" href="noviteti.html">NOVITETI</a></label>
-            </a>
-            </li>
-            <li><label for="menuCheckbox"><a style="font-family:poppins; font-weight:bold;" href="https://www.youtube.com/" target="_blank">YOUTUBE</a></label></li>
-            <li><label  for="menuCheckbox"><a style="font-family:poppins; font-weight:bold;" href="pricamo.html" >PRIČAMO O</a></label></li>
-            <li><label  for="menuCheckbox"><a style="font-family:poppins; font-weight:bold;" href="kontakt.html" >KONTAKT</a></label></li>
-            <label  for="menuCheckbox"><a style="font-family:poppins; font-weight:bold;" href="faq.html" >FAQ</a></label></li>
-
-                            
-
-            </ul>
+                <input type="checkbox" id="menuCheckbox" />
+                <span></span><span></span><span></span>
+                <ul id="glavni-meni">
+                    <li><a href="RetroWatchCO.html">POČETNA</a></li>
+                    <li><a href="noviteti.html">NOVITETI</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">YOUTUBE</a></li>
+                    <li><a href="pricamo.html">PRIČAMO O</a></li>
+                    <li><a href="kontakt.html">KONTAKT</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
             </div>
-            </nav>
-            </div>
-            </form>
-                <div class="slider">
-                    <input type="radio" name="slide" id="slide1" />
-                    <input type="radio" name="slide" id="slide2" />
-                    <input type="radio" name="slide" id="slide3" />
-                <div class="slides">
-                    <img src="SLIKE/wallpaperflare.com_wallpaper.jpg" alt="Slika 1"/>
-                    <img src="SLIKE/5.jpg" alt="Slika 2"/>
-                    <img src="SLIKE/wallpaperflare.com_wallpaper (1).jpg" alt="Slika 3"/>
-                </div>
-                <div class="controls">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-                <h1 style="font-family: poppins; text-align: center; color: #021429; font-size: 40px; margin-left: 45px;">- RetroWatch -</h1>
-                <p style="text-align: center; font-family: poppins; font-style: italic; padding: 15px; font-size: 19px; color: #021429; margin-left: 80px; margin-right: 80px;">RetroWatch je vaš ultimativni izvor za vintage i retro satove, gde se prošlost susreće sa stilom i kvalitetom.
-                Na RetroWatch sajtu možete pronaći pažljivo odabrane satove sa jedinstvenim dizajnom koji odražava duh prošlih decenija.
-                Bilo da ste kolekcionar ili ljubitelj klasičnog izgleda, RetroWatch nudi širok izbor satova koji vraćaju vreme u pravi momenat.
-                Otkrijte kako stil i tradicija mogu da budu deo vaše svakodnevice uz RetroWatch – mesto gde vreme dobija novi sjaj, 
-                mesto za one koji žele da nose priču na svom zglobu, sa satovima koji su više od običnog dodatka.</p>
-                        <video style="width:65%; margin-left:85px; position:absolute; bottom:1655px; border-radius:10px;" autoplay="autoplay" loop="loop" muted="muted" >
-                            <source src="VIDEO/y2meta.net_1080p-watches-and-wonders-geneva-2025-teaser.mp4" type="video/mp4" />
-                        </video>
-                    <div style="height:820px;" id="elementi3">
-                        <a href="noviteti.html" > <img style="margin-left:1400px;width:20%; " id="noviteti" src="SLIKE/noviteti.png"/></a><br />
-                        <a href="https://www.youtube.com/" target="_blank"><img style="margin-left:1400px;width:20%;margin-top:15px;"  id="yt" src="SLIKE/yt.png" /></a><br />
-                        <a href="pricamo.html" ><img style="margin-left:1400px; width:20%;margin-top:15px;" id="pricamo" src="SLIKE/pricamo.png" /></a>
-                        
-                    </div>
-                
-                    <div style="height:auto;" id="elementi4">
-                        <a href="noviteti.html"> <img style=" width:20%; border-radius:10px; margin-left:4.5%; margin-bottom:50px;" id="slika9" src="NOVOSTI/jaeger.jpg"/></a>
-                        <a href="noviteti.html"><img style=" width:20%; border-radius:10px; margin-left:57px;margin-bottom:50px;" id="slika8" src="NOVOSTI/cartier.jpg" /></a>
-                        <a href="noviteti.html"><img style=" width:20%; border-radius:10px; margin-right:3%;margin-bottom:50px; margin-left:57px;" id="slika7" src="NOVOSTI/grand.jpg" /></a>
-                        <a href="noviteti.html"><img style=" width:20%; border-radius:10px; margin-right:3%;margin-bottom:50px; " id="slika7" src="NOVOSTI/piaget.jpg" /></a>
-                    </div>
-                    <div id="div-video">
-                        <video id="video" autoplay="autoplay" loop="loop" muted="muted" >
-                            <source  src="VIDEO/video1.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-                    <div id="zavrsni">
-                        
-                        <img id="logo2" src="SLIKE/logo5.png"/>
-                        <p style="font-family:poppins; font-weight:bold;" id="fp">&copy;2025 RetroWatch - Sva prava zadržana</p>
-                    </div>
-                <div>
-            </div>              
-        </div> 
+        </nav>
+    </div>
+
+    <div class="slider">
+        <input type="radio" name="slide" id="slide1" />
+        <input type="radio" name="slide" id="slide2" />
+        <input type="radio" name="slide" id="slide3" />
+        <div class="slides">
+            <img src="SLIKE/wallpaperflare.com_wallpaper.jpg" alt="Slika 1"/>
+            <img src="SLIKE/5.jpg" alt="Slika 2"/>
+            <img src="SLIKE/wallpaperflare.com_wallpaper (1).jpg" alt="Slika 3"/>
+        </div>
+        <div class="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+    </div>
+
+    <h1 style="font-family: poppins; text-align: center; color: #021429; font-size: 40px; margin-left: 45px;">- RetroWatch -</h1>
+    <p style="text-align: center; font-family: poppins; font-style: italic; padding: 15px; font-size: 19px; color: #021429; margin-left: 80px; margin-right: 80px;">
+        RetroWatch je vaš ultimativni izvor za vintage i retro satove, gde se prošlost susreće sa stilom i kvalitetom.
+        Na RetroWatch sajtu možete pronaći pažljivo odabrane satove sa jedinstvenim dizajnom koji odražava duh prošlih decenija.
+        Bilo da ste kolekcionar ili ljubitelj klasičnog izgleda, RetroWatch nudi širok izbor satova koji vraćaju vreme u pravi momenat.
+        Otkrijte kako stil i tradicija mogu da budu deo vaše svakodnevice uz RetroWatch – mesto gde vreme dobija novi sjaj,
+        mesto za one koji žele da nose priču na svom zglobu, sa satovima koji su više od običnog dodatka.
+    </p>
+
+    <div style="text-align: center; margin: 20px;">
+        <video style="width: 90%; border-radius:10px;" autoplay loop muted>
+            <source src="VIDEO/y2meta.net_1080p-watches-and-wonders-geneva-2025-teaser.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin: 40px 0;">
+    <a href="noviteti.html">
+        <img src="SLIKE/noviteti.png" alt="Noviteti" style="width: 420px; height: auto;" />
+    </a>
+    <a href="https://www.youtube.com/" target="_blank">
+        <img src="SLIKE/yt.png" alt="YouTube" style="width: 420px; height: auto;" />
+    </a>
+    <a href="pricamo.html">
+        <img src="SLIKE/pricamo.png" alt="Pričamo o" style="width: 420px; height: auto;" />
+    </a>
+</div>
+
+    <div id="elementi4" style="text-align: center;">
+        <a href="noviteti.html"><img class="galerija" src="NOVOSTI/jaeger.jpg" alt="Jaeger sat" style="width: 20%; border-radius: 10px; margin: 15px;" /></a>
+        <a href="noviteti.html"><img class="galerija" src="NOVOSTI/cartier.jpg" alt="Cartier sat" style="width: 20%; border-radius: 10px; margin: 15px;" /></a>
+        <a href="noviteti.html"><img class="galerija" src="NOVOSTI/grand.jpg" alt="Grand Seiko sat" style="width: 20%; border-radius: 10px; margin: 15px;" /></a>
+        <a href="noviteti.html"><img class="galerija" src="NOVOSTI/piaget.jpg" alt="Piaget sat" style="width: 20%; border-radius: 10px; margin: 15px;" /></a>
+    </div>
+
+    <div id="div-video">
+        <video id="video" autoplay loop muted style="width: 100%; display: block;">
+            <source src="VIDEO/video1.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <div id="zavrsni">
+        <img id="logo2" src="SLIKE/logo5.png" alt="RetroWatch logo"/>
+        <p style="font-family:poppins; font-weight:bold;" id="fp">&copy;2025 RetroWatch - Sva prava zadržana</p>
+    </div>
 </body>
 </html>
